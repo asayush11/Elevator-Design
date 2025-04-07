@@ -15,11 +15,11 @@ public class ElevatorController {
     }
 
     public void requestElevator(int sourceFloor, int destinationFloor) {
-        ElevatorCar optimalElevator = findOptimalElevator(sourceFloor, destinationFloor);
+        ElevatorCar optimalElevator = findOptimalElevator(sourceFloor);
         optimalElevator.addRequest(new Request(sourceFloor, destinationFloor));
     }
 
-    private ElevatorCar findOptimalElevator(int sourceFloor, int destinationFloor) {
+    private ElevatorCar findOptimalElevator(int sourceFloor) {
         ElevatorCar optimalElevator = null;
         int minDistance = Integer.MAX_VALUE;
 
